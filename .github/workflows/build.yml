@@ -1,3 +1,9 @@
+permissions:
+  contents: read
+  pages: write
+  deployments: write
+  id-token: write
+
 name: pages-function-test
 
 on:
@@ -12,6 +18,9 @@ jobs:
   build:
     # jobs.<job_id>.strategy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
         node-version: [20]
