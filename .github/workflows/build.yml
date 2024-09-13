@@ -47,6 +47,4 @@ jobs:
           echo test, and deploy your project.
 
       - name: Run a nodejs
-        run: /
-          node -v,
-          npm -v
+        run: node -v
