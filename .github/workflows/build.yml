@@ -40,3 +40,8 @@ jobs:
       # 构建项目
       - name: pnpm build
         run: pnpm build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './docs'
