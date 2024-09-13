@@ -48,3 +48,6 @@ jobs:
 
       - name: Run a nodejs
         run: node -v
+
+      - name: Run a pnpm
+        run: pnpm -v
